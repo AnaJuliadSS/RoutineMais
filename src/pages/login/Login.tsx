@@ -13,10 +13,10 @@ const Login = () => {
 
 	const handleLogin = async () => {
         try {
-            setErro("");
-            const response = await api.post("/auth/login", { email, senha });
-			const token = response.data.token;
-			localStorage.setItem("token", token);
+            // setErro("");
+            // const response = await api.post("/auth/login", { email, senha });
+			// const token = response.data.token;
+			// localStorage.setItem("token", token);
             navigate("/home");
         } catch (error: any) {
             if (error.response && error.response.status === 401) {
