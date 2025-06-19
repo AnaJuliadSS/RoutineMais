@@ -5,8 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import Home from './pages/home/Home';
 import PrivateRoute from './PrivateRoute';
+import { Main } from './pages/home/main';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,7 +20,7 @@ root.render(
           <Route path="/register" element={<Register />} />
 
           <Route element={<PrivateRoute />}>
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Main />} />
           </Route>
         </Routes>
       </BrowserRouter>
