@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RoutineMais/static/css/main.e189f471.css",
+    "main.js": "/RoutineMais/static/js/main.65df6fcb.js",
+    "static/js/453.cfb76f04.chunk.js": "/RoutineMais/static/js/453.cfb76f04.chunk.js",
+    "static/media/dica.mp3": "/RoutineMais/static/media/dica.694f89928f3994fed647.mp3",
+    "index.html": "/RoutineMais/index.html",
+    "main.e189f471.css.map": "/RoutineMais/static/css/main.e189f471.css.map",
+    "main.65df6fcb.js.map": "/RoutineMais/static/js/main.65df6fcb.js.map",
+    "453.cfb76f04.chunk.js.map": "/RoutineMais/static/js/453.cfb76f04.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e189f471.css",
+    "static/js/main.65df6fcb.js"
+  ]
+}

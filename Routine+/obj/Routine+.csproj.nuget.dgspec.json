@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ana.soares\\source\\repos\\Routine+\\Routine+.csproj": {}
+    "C:\\Users\\ana.soares\\Desktop\\TrabalhoFinalIHC\\Routine+\\Routine+.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ana.soares\\source\\repos\\Routine+\\Routine+.csproj": {
+    "C:\\Users\\ana.soares\\Desktop\\TrabalhoFinalIHC\\Routine+\\Routine+.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ana.soares\\source\\repos\\Routine+\\Routine+.csproj",
+        "projectUniqueName": "C:\\Users\\ana.soares\\Desktop\\TrabalhoFinalIHC\\Routine+\\Routine+.csproj",
         "projectName": "Routine+",
-        "projectPath": "C:\\Users\\ana.soares\\source\\repos\\Routine+\\Routine+.csproj",
+        "projectPath": "C:\\Users\\ana.soares\\Desktop\\TrabalhoFinalIHC\\Routine+\\Routine+.csproj",
         "packagesPath": "C:\\Users\\ana.soares\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ana.soares\\source\\repos\\Routine+\\obj\\",
+        "outputPath": "C:\\Users\\ana.soares\\Desktop\\TrabalhoFinalIHC\\Routine+\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ana.soares\\AppData\\Roaming\\NuGet\\NuGet.Config",
