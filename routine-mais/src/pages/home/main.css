@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: 'Baloo 2', cursive;
+  color: #5D5959;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.score-counter {
+  background-color: #9D7AE6;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #5D5959;
+  cursor: pointer;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+.stopwatch, .mini-calendar {
+  margin-bottom: 2rem;
+}
+
+.stopwatch h3, .mini-calendar h3 {
+  color: #5D5959;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.time-display {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.stopwatch-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.start-button, .reset-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.current-date {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5D5959;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.day-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #5D5959;
+}
+
+.current-day {
+  font-size: 2rem;
+  color: #5D5959;
+  font-weight: 600;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #413F42;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08),
+              0 4px 8px rgba(0, 0, 0, 0.08),
+              0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.task-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.task-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.add-task-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.add-task-button {
+  background-color: #f16789;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.overdue-tasks h3 {
+  color: #f16789;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.overdue-tasks ul {
+  list-style-type: none;
+}
+
+.overdue-tasks li {
+  color: #5D5959;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+              0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Tooltip */
+.tooltip-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-wrapper {
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  max-width: 200px;
+  background-color: #5D5959;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-60%, 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #5D5959 transparent transparent transparent;
+  transform: rotate(180deg); /* Inverte a seta para apontar para baixo */
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.score-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.score-container .tooltip {
+  margin-left: 8px;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container img{
+  max-height: 45px;
+}
+
+/* Cronômetro */
+.time-display {
+  font-family: monospace;
+}
+
+/* Botões do cronômetro - versão com #B28DFF e #FFB347 */
+.start-button {
+  background-color: #B28DFF; /* Lavanda suave */
+  color: white; /* Garante contraste com o fundo */
+}
+
+.start-button:hover {
+  background-color: #9D7AE6; /* Tom 10% mais escuro para hover */
+}
+
+.reset-button {
+  background-color: #FFB347; /* Laranja pastel */
+  color: white; /* Ou preto (#333) se preferir mais contraste */
+}
+
+.reset-button:hover {
+  background-color: #E6A140; /* Tom 10% mais escuro para hover */
+}
+
+/* Mini calendário */
+.current-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilos para os modais */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emergency-modal {
+  max-width: 400px;
+}
+
+.modal h2 {
+  color: #5D5959;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5D5959;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.time-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-inputs .form-group {
+  flex: 1;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancel-button {
+  background-color: #e0e0e0;
+  color: #5D5959;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #FF8FAB;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos específicos para o modal de emergência */
+.emergency-contacts {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.contact-item input {
+  margin-right: 0.8rem;
+}
+
+.add-contact {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.add-contact input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.add-contact button {
+  background-color: #5D5959;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.emergency-task {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: #5D5959;
+}
+
+/* TODO */
+.emergency-button {
+  background-color: #FFB347;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Estilos para o modal de tarefa */
+.task-modal {
+  max-width: 500px;
+}
+
+.task-time {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5D5959;
+  margin-bottom: 1.5rem;
+}
+
+.task-description {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.task-description h3 {
+  margin-bottom: 0.5rem;
+  color: #5D5959;
+}
+
+.complete-button {
+  background-color: #FF8FAB;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.complete-button:hover {
+  background-color: #E58099;
+}
+
+/* Estilo para tarefas concluídas */
+.task-card.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+/* Rodapé com tarefas atrasadas */
+.overdue-tasks ul {
+  list-style-type: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.overdue-tasks li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #413F42;
+  font-weight: bold;
+  background-color: var(--pink-light);
+  padding: 7px;
+}
+
+.overdue-tasks p {
+  color: #5D5959;
+  font-style: italic;
+}

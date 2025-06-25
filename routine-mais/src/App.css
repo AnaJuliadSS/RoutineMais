@@ -1,0 +1,17 @@
+:root {
+  --pink: #FF8FAB;
+  --pink-light: #FFE0EB;
+  --purple: #5D27DB;
+  --purple-light: #EDE7FF;
+  --orange: #FFB347;
+  --orange-light: #FFE5B4;
+
+  --background: var(--pink-light);
+  --primary: var(--pink);
+  --secondary: var(--purple);
+  --accent: var(--orange);
+}
+
+body {
+  background-color: var(--background);
+}
